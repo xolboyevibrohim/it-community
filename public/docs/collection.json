@@ -1,0 +1,389 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/community.loc"
+        }
+    ],
+    "info": {
+        "name": "IT-community uchun api documentatsiya",
+        "_postman_id": "d520ca33-9e71-48f1-bbc0-ecf030706320",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Auth",
+            "description": "",
+            "item": [
+                {
+                    "name": "Login (Avtorizatsiya)",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"phone\":\"998017878305\",\"password\":\"|xyB]()Q''$l3a,!4p\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"data\": {\n        \"token_type\": \"Bearer\",\n        \"expires_in\": 31622400,\n        \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiMWU1N2IzNTA1OWQwM2Q3ZGEzMmY5NGZlNTA3YzEwOWVmNjM2YmU5NDIxYWZjNjNmMmZjYWUxMjZhMzlhYTMwMmRlMDNlOTQyZDU1ZjhjMjQiLCJpYXQiOjE2ODM5ODUyNDguOTQ2NzMzLCJuYmYiOjE2ODM5ODUyNDguOTQ2NzM1LCJleHAiOjE3MTU2MDc2NDguOTMzMzc1LCJzdWIiOiIzIiwic2NvcGVzIjpbIioiXX0.pzAEedBicJdJNhaeQHbYYSYcOs7HbiXkZkYGEntIKufWe8nN03fqcn1DohsuStmhfDHWXdh63ajsTws_dSYQ_1-_0H3sfKB14LLrK83Qlk7wGh74gmKv-1O0Dl8iNfoNTh5R8eNMK_0589Z0Obh7tOdLgpitD03cxy1PZKhkCE9pii79hRY4zixteLj3Bn3e-d36qXtOUVpNkYnN3AP9ejZ_UAvq5nt1QFf7gsMbBhiI4xhk5wXr9JcpQvuR3-E6R2nyBgcwpJ-DD_qJzKMoBKxBuibYeDak_p0FAn7-A5uWbg9W3phB4waSsIoTgbneAwOwztK0-KECLnit1F3vK5hF4FRpzpg9TieRZnLezJiSK0dkE0IedtwPHsHjYQjUkjhPEGQ5M292mHSF7j7iZbKFLp9LlRCrxZdRMNaSOPWYGo48MMRAVxmAYLyNGEOZOLaM_auWsO76Lr5oSioB8_jq3z6CqCxzjNIHPK_xxEhR2SSj93dwijqvhUmrMSBbGPYQSyoiIBDYBFab1u9fcr58GwIWwbbK1J4VaTquHhvQWXmwqNFYZQnoMrFKmHRmIDwqWT9wr1a3IpHYqw2YpoK5LovJAcTtyqix6B62Umk_7h_8WKCPHO3marAfYgmLSxAgyTF8jPWERquDGQqK-ca7ViARKYehqHajE0IWJ-Q\",\n        \"refresh_token\": \"def50200a82b1c3e97d35ad2ca4acc73d3783e4b1707bc36dc90f3403d900497aefe494cc9251baa7df63a50457e5ba53bcf476909089975eac1368b08652fd678d9848d4fad60b3184972402864eeb91712bbd0aa5c39cb02220739c90fe1b21cbe3162ad4ab021ad3363691bdd20134125782a692cfc5ef2c5ee60072e275320f79abbd7c81773ab6fb92fc981e5c08064e2d8e9e695fa01caa974726d6857daa94b0f83ee7b6e0fdf385816fc4578d3e79b784d999b242e4e2c73335e9de60097f68f924e328b7143fed92bfc91e8432c1b28e300110d32e99e31c446373760c570e6d08425ad22bdde7217237c4ac5010ad25573e40558be6607372e9897dc6ac57c0b08c236600b306e073bb8c8e6a4cb71a7e1212f3ba6dcc4f4de01f4ea9bd97daa1caceaa49dd21a930814c2551950a6d313eb2c1caa761a6e64435daaa38c3208082f0a456cbf477d9c303d30f909363ad24228704bbcdf21ee27fa54d69f3b\"\n    }\n}\n",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n    \"errors\": [\n        {\n            \"message\": \"login or password incorrect\"\n        }\n    ]\n}\n",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n    \"message\": \"Unauthorized\"\n}\n",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Register",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"phone\":\"998947672376\",\"email\":\"gkulas@example.org\",\"name\":\"oslaqc\",\"password\":\"3\\\\hgPSZ{qRk~P\",\"password_confirmation\":\"dlfiuzwrutkvesznbhz\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"data\": {\n        \"success\": true\n    }\n}\n",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n    \"message\": \"Unauthorized\"\n}\n",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/auth\/logout"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"data\": {\n        \"success\": true\n    }\n}\n",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n    \"message\": \"Unauthorized\"\n}\n",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Category",
+            "description": "",
+            "item": [
+                {
+                    "name": "Category-list (userni postlarini olish)",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/category",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/category"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n    \"message\": \"Unauthorized\"\n}\n",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n    \"data\": [\n        {\n            \"name\": \"iure assumenda corrupti consequuntur vero\",\n            \"id\": 1\n        },\n        {\n            \"name\": \"aut labore beatae amet debitis\",\n            \"id\": 2\n        },\n        {\n            \"name\": \"quia qui odit libero aspernatur\",\n            \"id\": 3\n        },\n        {\n            \"name\": \"harum id ut dolor voluptatem\",\n            \"id\": 4\n        },\n        {\n            \"name\": \"aut excepturi aperiam eos eos\",\n            \"id\": 5\n        },\n        {\n            \"name\": \"saepe officiis facilis sed quia\",\n            \"id\": 6\n        },\n        {\n            \"name\": \"et omnis ad reprehenderit ut\",\n            \"id\": 7\n        },\n        {\n            \"name\": \"quidem temporibus soluta quis ipsam\",\n            \"id\": 8\n        },\n        {\n            \"name\": \"aliquid ex nobis id quo\",\n            \"id\": 9\n        },\n        {\n            \"name\": \"sequi sed eum alias ut\",\n            \"id\": 10\n        },\n        {\n            \"name\": \"consequatur beatae unde atque sint\",\n            \"id\": 11\n        },\n        {\n            \"name\": \"quia facere delectus aperiam tempora\",\n            \"id\": 12\n        },\n        {\n            \"name\": \"sed aliquam fugit vitae excepturi\",\n            \"id\": 13\n        },\n        {\n            \"name\": \"laboriosam aut assumenda voluptates et\",\n            \"id\": 14\n        },\n        {\n            \"name\": \"quam libero asperiores minima illo\",\n            \"id\": 15\n        },\n        {\n            \"name\": \"et aliquam laborum ipsam doloribus\",\n            \"id\": 16\n        },\n        {\n            \"name\": \"placeat quia suscipit rem eius\",\n            \"id\": 17\n        },\n        {\n            \"name\": \"dolorum aut nulla ut ab\",\n            \"id\": 18\n        },\n        {\n            \"name\": \"et maiores sed ut ut\",\n            \"id\": 19\n        },\n        {\n            \"name\": \"numquam cum molestias accusamus ut\",\n            \"id\": 20\n        },\n        {\n            \"name\": \"dolorem repellendus accusantium dolor quia\",\n            \"id\": 21\n        },\n        {\n            \"name\": \"aut delectus consectetur perferendis cumque\",\n            \"id\": 22\n        },\n        {\n            \"name\": \"ut dolores fugit quia et\",\n            \"id\": 23\n        },\n        {\n            \"name\": \"a et doloribus aut aut\",\n            \"id\": 24\n        },\n        {\n            \"name\": \"cupiditate ipsam accusantium nobis officia\",\n            \"id\": 25\n        },\n        {\n            \"name\": \"neque iure dolore molestiae consequatur\",\n            \"id\": 26\n        },\n        {\n            \"name\": \"qui iure dolore voluptatum pariatur\",\n            \"id\": 27\n        },\n        {\n            \"name\": \"eveniet expedita error deserunt et\",\n            \"id\": 28\n        },\n        {\n            \"name\": \"et autem quam aspernatur quia\",\n            \"id\": 29\n        },\n        {\n            \"name\": \"eum aut illo molestias omnis\",\n            \"id\": 30\n        }\n    ]\n}\n",
+                            "name": ""
+                        },
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Post",
+            "description": "",
+            "item": [
+                {
+                    "name": "Post-list (userni postlarini olish)",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/posts",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/posts"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"per_page\":12}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"data\": [\n        {\n            \"id\": 3,\n            \"title\": \"yangi post\",\n            \"description\": \"post matni\",\n            \"file_url\": \"\/storage\/post\/ypV4f\/Z0cEwA8AqsRij5tw46pyeBLhayNRwohiGlkRG94s.png\",\n            \"user_id\": 5,\n            \"category_id\": 1,\n            \"is_active\": \"1\",\n            \"created_at\": \"2023-05-13T14:25:14.000000Z\",\n            \"updated_at\": \"2023-05-13T14:25:14.000000Z\"\n        }\n    ],\n    \"pagination\": {\n        \"current_page\": 1,\n        \"per_page\": 10,\n        \"total\": 1,\n        \"last_page\": 1\n    }\n}\n",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n    \"message\": \"Unauthorized\"\n}\n",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Post-view (postni id orqali olish)",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/posts\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/posts\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "3",
+                                    "description": "The ID of the post."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"data\": {\n        \"id\": 3,\n        \"title\": \"yangi post\",\n        \"description\": \"post matni\",\n        \"file_url\": \"\/storage\/post\/ypV4f\/Z0cEwA8AqsRij5tw46pyeBLhayNRwohiGlkRG94s.png\",\n        \"user_id\": 5,\n        \"category_id\": 1,\n        \"is_active\": \"1\",\n        \"created_at\": \"2023-05-13T14:25:14.000000Z\",\n        \"updated_at\": \"2023-05-13T14:25:14.000000Z\"\n    }\n}\n",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n    \"errors\": [\n        {\n            \"message\": \"post topilmadi\"\n        }\n    ]\n}\n",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n    \"message\": \"Unauthorized\"\n}\n",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Post-delete (postni id orqali o'chirish)",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/posts\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/posts\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "3",
+                                    "description": "The ID of the post."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"data\": {\n        \"success\": true\n    }\n}\n",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n    \"errors\": [\n        {\n            \"message\": \"post topilmadi\"\n        }\n    ]\n}\n",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n    \"message\": \"Unauthorized\"\n}\n",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

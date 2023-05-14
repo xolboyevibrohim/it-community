@@ -1,0 +1,181 @@
+name: Category
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/category
+    metadata:
+      groupName: Category
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Category-list (userni postlarini olish)'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: |
+          {
+              "message": "Unauthorized"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 401
+        content: |
+          {
+              "data": [
+                  {
+                      "name": "iure assumenda corrupti consequuntur vero",
+                      "id": 1
+                  },
+                  {
+                      "name": "aut labore beatae amet debitis",
+                      "id": 2
+                  },
+                  {
+                      "name": "quia qui odit libero aspernatur",
+                      "id": 3
+                  },
+                  {
+                      "name": "harum id ut dolor voluptatem",
+                      "id": 4
+                  },
+                  {
+                      "name": "aut excepturi aperiam eos eos",
+                      "id": 5
+                  },
+                  {
+                      "name": "saepe officiis facilis sed quia",
+                      "id": 6
+                  },
+                  {
+                      "name": "et omnis ad reprehenderit ut",
+                      "id": 7
+                  },
+                  {
+                      "name": "quidem temporibus soluta quis ipsam",
+                      "id": 8
+                  },
+                  {
+                      "name": "aliquid ex nobis id quo",
+                      "id": 9
+                  },
+                  {
+                      "name": "sequi sed eum alias ut",
+                      "id": 10
+                  },
+                  {
+                      "name": "consequatur beatae unde atque sint",
+                      "id": 11
+                  },
+                  {
+                      "name": "quia facere delectus aperiam tempora",
+                      "id": 12
+                  },
+                  {
+                      "name": "sed aliquam fugit vitae excepturi",
+                      "id": 13
+                  },
+                  {
+                      "name": "laboriosam aut assumenda voluptates et",
+                      "id": 14
+                  },
+                  {
+                      "name": "quam libero asperiores minima illo",
+                      "id": 15
+                  },
+                  {
+                      "name": "et aliquam laborum ipsam doloribus",
+                      "id": 16
+                  },
+                  {
+                      "name": "placeat quia suscipit rem eius",
+                      "id": 17
+                  },
+                  {
+                      "name": "dolorum aut nulla ut ab",
+                      "id": 18
+                  },
+                  {
+                      "name": "et maiores sed ut ut",
+                      "id": 19
+                  },
+                  {
+                      "name": "numquam cum molestias accusamus ut",
+                      "id": 20
+                  },
+                  {
+                      "name": "dolorem repellendus accusantium dolor quia",
+                      "id": 21
+                  },
+                  {
+                      "name": "aut delectus consectetur perferendis cumque",
+                      "id": 22
+                  },
+                  {
+                      "name": "ut dolores fugit quia et",
+                      "id": 23
+                  },
+                  {
+                      "name": "a et doloribus aut aut",
+                      "id": 24
+                  },
+                  {
+                      "name": "cupiditate ipsam accusantium nobis officia",
+                      "id": 25
+                  },
+                  {
+                      "name": "neque iure dolore molestiae consequatur",
+                      "id": 26
+                  },
+                  {
+                      "name": "qui iure dolore voluptatum pariatur",
+                      "id": 27
+                  },
+                  {
+                      "name": "eveniet expedita error deserunt et",
+                      "id": 28
+                  },
+                  {
+                      "name": "et autem quam aspernatur quia",
+                      "id": 29
+                  },
+                  {
+                      "name": "eum aut illo molestias omnis",
+                      "id": 30
+                  }
+              ]
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

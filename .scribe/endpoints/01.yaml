@@ -1,0 +1,227 @@
+name: Post
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/posts
+    metadata:
+      groupName: Post
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Post-list (userni postlarini olish)'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      per_page:
+        name: per_page
+        description: 'page dagi postlar soni(default-10).'
+        required: false
+        example: 12
+        type: integer
+        custom: []
+    cleanBodyParameters:
+      per_page: 12
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |
+          {
+              "data": [
+                  {
+                      "id": 3,
+                      "title": "yangi post",
+                      "description": "post matni",
+                      "file_url": "/storage/post/ypV4f/Z0cEwA8AqsRij5tw46pyeBLhayNRwohiGlkRG94s.png",
+                      "user_id": 5,
+                      "category_id": 1,
+                      "is_active": "1",
+                      "created_at": "2023-05-13T14:25:14.000000Z",
+                      "updated_at": "2023-05-13T14:25:14.000000Z"
+                  }
+              ],
+              "pagination": {
+                  "current_page": 1,
+                  "per_page": 10,
+                  "total": 1,
+                  "last_page": 1
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 401
+        content: |
+          {
+              "message": "Unauthorized"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/posts/{id}'
+    metadata:
+      groupName: Post
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Post-view (postni id orqali olish)'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the post.'
+        required: true
+        example: 3
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 3
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |
+          {
+              "data": {
+                  "id": 3,
+                  "title": "yangi post",
+                  "description": "post matni",
+                  "file_url": "/storage/post/ypV4f/Z0cEwA8AqsRij5tw46pyeBLhayNRwohiGlkRG94s.png",
+                  "user_id": 5,
+                  "category_id": 1,
+                  "is_active": "1",
+                  "created_at": "2023-05-13T14:25:14.000000Z",
+                  "updated_at": "2023-05-13T14:25:14.000000Z"
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 400
+        content: |
+          {
+              "errors": [
+                  {
+                      "message": "post topilmadi"
+                  }
+              ]
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 401
+        content: |
+          {
+              "message": "Unauthorized"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/posts/{id}'
+    metadata:
+      groupName: Post
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Post-delete (postni id orqali o'chirish)"
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the post.'
+        required: true
+        example: 3
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 3
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |
+          {
+              "data": {
+                  "success": true
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 400
+        content: |
+          {
+              "errors": [
+                  {
+                      "message": "post topilmadi"
+                  }
+              ]
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 401
+        content: |
+          {
+              "message": "Unauthorized"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

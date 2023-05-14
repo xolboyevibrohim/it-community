@@ -1,0 +1,225 @@
+name: Auth
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/auth/login
+    metadata:
+      groupName: Auth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Login (Avtorizatsiya)'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      phone:
+        name: phone
+        description: 'Must match the regex /^(998)([0-9]{9})$/.'
+        required: true
+        example: '998017878305'
+        type: string
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: "|xyB]()Q''$l3a,!4p"
+        type: string
+        custom: []
+    cleanBodyParameters:
+      phone: '998017878305'
+      password: "|xyB]()Q''$l3a,!4p"
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |
+          {
+              "data": {
+                  "token_type": "Bearer",
+                  "expires_in": 31622400,
+                  "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiMWU1N2IzNTA1OWQwM2Q3ZGEzMmY5NGZlNTA3YzEwOWVmNjM2YmU5NDIxYWZjNjNmMmZjYWUxMjZhMzlhYTMwMmRlMDNlOTQyZDU1ZjhjMjQiLCJpYXQiOjE2ODM5ODUyNDguOTQ2NzMzLCJuYmYiOjE2ODM5ODUyNDguOTQ2NzM1LCJleHAiOjE3MTU2MDc2NDguOTMzMzc1LCJzdWIiOiIzIiwic2NvcGVzIjpbIioiXX0.pzAEedBicJdJNhaeQHbYYSYcOs7HbiXkZkYGEntIKufWe8nN03fqcn1DohsuStmhfDHWXdh63ajsTws_dSYQ_1-_0H3sfKB14LLrK83Qlk7wGh74gmKv-1O0Dl8iNfoNTh5R8eNMK_0589Z0Obh7tOdLgpitD03cxy1PZKhkCE9pii79hRY4zixteLj3Bn3e-d36qXtOUVpNkYnN3AP9ejZ_UAvq5nt1QFf7gsMbBhiI4xhk5wXr9JcpQvuR3-E6R2nyBgcwpJ-DD_qJzKMoBKxBuibYeDak_p0FAn7-A5uWbg9W3phB4waSsIoTgbneAwOwztK0-KECLnit1F3vK5hF4FRpzpg9TieRZnLezJiSK0dkE0IedtwPHsHjYQjUkjhPEGQ5M292mHSF7j7iZbKFLp9LlRCrxZdRMNaSOPWYGo48MMRAVxmAYLyNGEOZOLaM_auWsO76Lr5oSioB8_jq3z6CqCxzjNIHPK_xxEhR2SSj93dwijqvhUmrMSBbGPYQSyoiIBDYBFab1u9fcr58GwIWwbbK1J4VaTquHhvQWXmwqNFYZQnoMrFKmHRmIDwqWT9wr1a3IpHYqw2YpoK5LovJAcTtyqix6B62Umk_7h_8WKCPHO3marAfYgmLSxAgyTF8jPWERquDGQqK-ca7ViARKYehqHajE0IWJ-Q",
+                  "refresh_token": "def50200a82b1c3e97d35ad2ca4acc73d3783e4b1707bc36dc90f3403d900497aefe494cc9251baa7df63a50457e5ba53bcf476909089975eac1368b08652fd678d9848d4fad60b3184972402864eeb91712bbd0aa5c39cb02220739c90fe1b21cbe3162ad4ab021ad3363691bdd20134125782a692cfc5ef2c5ee60072e275320f79abbd7c81773ab6fb92fc981e5c08064e2d8e9e695fa01caa974726d6857daa94b0f83ee7b6e0fdf385816fc4578d3e79b784d999b242e4e2c73335e9de60097f68f924e328b7143fed92bfc91e8432c1b28e300110d32e99e31c446373760c570e6d08425ad22bdde7217237c4ac5010ad25573e40558be6607372e9897dc6ac57c0b08c236600b306e073bb8c8e6a4cb71a7e1212f3ba6dcc4f4de01f4ea9bd97daa1caceaa49dd21a930814c2551950a6d313eb2c1caa761a6e64435daaa38c3208082f0a456cbf477d9c303d30f909363ad24228704bbcdf21ee27fa54d69f3b"
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 400
+        content: |
+          {
+              "errors": [
+                  {
+                      "message": "login or password incorrect"
+                  }
+              ]
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 401
+        content: |
+          {
+              "message": "Unauthorized"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/auth/register
+    metadata:
+      groupName: Auth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Register
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      phone:
+        name: phone
+        description: 'Must match the regex /^(998)([0-9]{9})$/.'
+        required: true
+        example: '998947672376'
+        type: string
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: false
+        example: gkulas@example.org
+        type: string
+        custom: []
+      name:
+        name: name
+        description: 'Must be at least 2 characters.'
+        required: true
+        example: oslaqc
+        type: string
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 6 characters.'
+        required: true
+        example: '3\hgPSZ{qRk~P'
+        type: string
+        custom: []
+      password_confirmation:
+        name: password_confirmation
+        description: 'This field is required when <code>password</code> is present.  The value and <code>password</code> must match. Must be at least 6 characters.'
+        required: false
+        example: dlfiuzwrutkvesznbhz
+        type: string
+        custom: []
+    cleanBodyParameters:
+      phone: '998947672376'
+      email: gkulas@example.org
+      name: oslaqc
+      password: '3\hgPSZ{qRk~P'
+      password_confirmation: dlfiuzwrutkvesznbhz
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |
+          {
+              "data": {
+                  "success": true
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 401
+        content: |
+          {
+              "message": "Unauthorized"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/auth/logout
+    metadata:
+      groupName: Auth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Logout
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |
+          {
+              "data": {
+                  "success": true
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 401
+        content: |
+          {
+              "message": "Unauthorized"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
